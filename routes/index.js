@@ -27,6 +27,16 @@ router.get('/archive', function (req, res, next) {
   });
 });
 
+/* GET contact page. */
+router.get('/contact', function (req, res, next) {
+  console.log(posts);
+
+  res.render('contact', {
+    title: "contact",
+    posts: posts.posts
+  });
+});
+
 
 /* GET create page. */
 router.get('/create', function (req, res, next) {

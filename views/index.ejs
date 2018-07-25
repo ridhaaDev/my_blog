@@ -16,8 +16,8 @@ and open the template in the editor.
 
     <link rel="stylesheet" href="../stylesheets/master.css">
     <link rel="stylesheet" href="../stylesheets/style.css">
-    
-    
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
 
@@ -27,7 +27,9 @@ and open the template in the editor.
 
 
     <nav>
-        <logo><img src="../images/logo.png" height="60" ></logo>
+        <logo>
+            <img src="../images/logo.png" height="60">
+        </logo>
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
@@ -40,39 +42,45 @@ and open the template in the editor.
                 <a href="/create">Write</a>
             </li>
             <li>
-                <a href="">Contact</a>
+                <a href="/archive">Archive</a>
             </li>
             <li>
-                    <a href="/archive">Archive</a>
-                </li>
+                <a href="/contact">Contact</a>
+            </li>
         </ul>
     </nav>
-    
+
     <section class="guestArticle" width="100%">
-    <% if (posts) { %>
-    <div>
-        <h1><%= posts[posts.length-1].title %></h1>
-        <p>By <%= posts[posts.length-1].author %></p>
-        <hr>
-        <p>
-        <%= posts[posts.length-1].content %>
-        </p>
+        <% if (posts) { %>
+            <div>
+                <h1>
+                    <%= posts[posts.length-1].title %>
+                </h1>
+                <p>By
+                    <%= posts[posts.length-1].author %>
+                </p>
+                <hr>
+                <p>
+                    <%= posts[posts.length-1].content %>
+                </p>
 
-        <button id="<%= posts[posts.length-1].id %>"><a href="/<%= posts[posts.length-1].id %>">Read More</a></button>
-        </div>
-
-       
-        <img src="<%= posts[posts.length-1].img %>">
-    
-        
-       
+                <button id="<%= posts[posts.length-1].id %>">
+                    <a href="/<%= posts[posts.length-1].id %>">Read More</a>
+                </button>
+            </div>
 
 
+            <img src="<%= posts[posts.length-1].img %>">
 
-       
-  
-    <% } %>
-    
+
+
+
+
+
+
+
+            <% } %>
+
     </section>
 
 
@@ -88,30 +96,36 @@ and open the template in the editor.
             <% posts.forEach(function(post){ %>
 
                 <section class="article articel1">
-                <img src="<%= post.img %>">
+                    <img src="<%= post.img %>">
 
-                <div class="previewContainer">
+                    <div class="previewContainer">
 
-                    <h1><bold> <%= post.title %> </bold></h1>
-                    
+                        <h1>
+                            <bold>
+                                <%= post.title %>
+                            </bold>
+                        </h1>
+
                         <%= post.content %>
 
-                    <p class=""> Author: 
-                        <%= post.author %>
-                    </p>
-                    <button id="<%= post.id %>"><a href="/<%= post.id %>">Read More</a></button>
+                            <p class=""> Author:
+                                <%= post.author %>
+                            </p>
+                            <button id="<%= post.id %>">
+                                <a href="/<%= post.id %>">Read More</a>
+                            </button>
                 </section>
                 </section>
 
                 <% }); %>
                     <% } %>
 
-    </div>
+                        </div>
 
 
-    <footer>
-        ©Copyright 2018. Made by Ridhaa Cupido
-    </footer>
+                        <footer>
+                            ©Copyright 2018. Made by Ridhaa Cupido
+                        </footer>
 
 
 </body>

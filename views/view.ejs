@@ -1,5 +1,6 @@
 <!Doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,41 +12,58 @@
 
 <body>
 
-<nav>
-<logo  width="200"><img src="../images/logo.png" height="70" width="200"></logo>
-<button id="hamburgerButton">
-    <i class="fas fa-bars"></i>
-</button>
+    <nav>
+        <logo>
+            <img src="../images/logo.png" height="60">
+        </logo>
+        <button id="hamburgerButton">
+            <i class="fas fa-bars"></i>
+        </button>
 
-<ul id="navLinks">
-    <li>
-        <a href="/">Home</a>
-    </li>
-    <li>
-        <a href="/create">Write</a>
-    </li>
-    <li>
-        <a href="">Contact</a>
-    </li>
-</ul>
-</nav>
+        <ul id="navLinks">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/create">Write</a>
+            </li>
+            <li>
+                <a href="/archive">Archive</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-<div class="viewContainer">
-<h1><%= posts.title %></h1>
-<img src="<%= posts.img %>" width="50%">
-<hr>
-<p><%= posts.content %></p>
-<hr>
+    <div class="viewContainer">
+        <h1>
+            <%= posts.title %>
+        </h1>
+        <img src="<%= posts.img %>" width="50%">
+        <hr>
+        <p>
+            <%= posts.content %>
+        </p>
+        <hr>
 
-<p>By <%= posts.author %></p>
-
-      
-                    
-<button> <a href="/update/<%= posts.id %>" class="btn btn-block btn-primary">Update</a></button>
-<button><a href="/delete/<%= posts.id %>" class="btn btn-block btn-danger">Delete</a></button>
-</div>
+        <p>By
+            <%= posts.author %>
+        </p>
 
 
+
+        <button>
+            <a href="/update/<%= posts.id %>" class="btn btn-block btn-primary">Update</a>
+        </button>
+        <button>
+            <a href="/delete/<%= posts.id %>" class="btn btn-block btn-danger">Delete</a>
+        </button>
+    </div>
+
+    <footer>
+        ©Copyright 2018. Made by Ridhaa Cupido
+    </footer>
 </body>
 
 
