@@ -31,6 +31,9 @@ img{
 }
 
 
+.articleContainer{
+  margin: 50px 10%;
+}
 
 
 .articleContainer .article{
@@ -46,9 +49,7 @@ img{
 /*Mobile view for guest article*/
 .guestArticle{
   color: black;
-   /* margin:0 10%;
-   width: 80%; */
-   background: linear-gradient(to right, #5C258D, #4389A2);
+  background: linear-gradient(to right, #5C258D, #4389A2);
 }
 
 .guestArticle *{
@@ -62,17 +63,20 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap:10px;
+    padding: 40px 0;
+    width: 100%;
 } 
 
 .guestArticle figure img{
     margin: 0;
     padding: 0;
-    width: 80%;
+    width: 100%;
 
 }
 .articleContainer .article img{
   height: 300px;
 }
+
 
 }
 
@@ -83,8 +87,9 @@ img{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap:10px;
-      margin: 0 10%;
+     margin: 0 auto;
       width: 80%;
+      padding: 50px 0;
   } 
   .articleContainer .article img{
     width: 100%;
@@ -124,12 +129,6 @@ img{
 
 
 
-/*Styling for the footer*/
-footer{
-  background-color: black;
-  color: white;
-  padding: 5px;
-  text-align: center;
 
-}
+
 

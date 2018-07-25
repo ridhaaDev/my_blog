@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="en">
 
 <head>
-    <title>Blog website</title>
-    <meta charset="windows-1252">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>archive</title>
     <script src="../javascripts/jquery-3.3.1.min.js"></script>
     <script src="../javascripts/script.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
@@ -20,13 +16,11 @@ and open the template in the editor.
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
-
 </head>
 
 <body>
 
-
-    <nav>
+   <nav>
         <logo><img src="../images/logo.png" height="60" ></logo>
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
@@ -47,39 +41,6 @@ and open the template in the editor.
                 </li>
         </ul>
     </nav>
-    
-    <section class="guestArticle" width="100%">
-    <% if (posts) { %>
-    <div>
-        <h1><%= posts[posts.length-1].title %></h1>
-        <p>By <%= posts[posts.length-1].author %></p>
-        <hr>
-        <p>
-        <%= posts[posts.length-1].content %>
-        </p>
-
-        <button id="<%= posts[posts.length-1].id %>"><a href="/<%= posts[posts.length-1].id %>">Read More</a></button>
-        </div>
-
-       
-        <img src="<%= posts[posts.length-1].img %>">
-    
-        
-       
-
-
-
-       
-  
-    <% } %>
-    
-    </section>
-
-
-    <!-- <h1>
-            <%=  title %>
-        </h1> -->
-
 
     <div class="articleContainer">
 
@@ -88,31 +49,36 @@ and open the template in the editor.
             <% posts.forEach(function(post){ %>
 
                 <section class="article articel1">
-                <img src="<%= post.img %>">
+                    <img src="<%= post.img %>">
 
-                <div class="previewContainer">
+                    <div class="previewContainer">
 
-                    <h1><bold> <%= post.title %> </bold></h1>
-                    
+                        <h1>
+                            <bold>
+                                <%= post.title %>
+                            </bold>
+                        </h1>
+
                         <%= post.content %>
 
-                    <p class=""> Author: 
-                        <%= post.author %>
-                    </p>
-                    <button id="<%= post.id %>"><a href="/<%= post.id %>">Read More</a></button>
+                            <p class=""> Author:
+                                <%= post.author %>
+                            </p>
+                            <button id="<%= post.id %>">
+                                <a href="/<%= post.id %>">Read More</a>
+                            </button>
                 </section>
                 </section>
 
                 <% }); %>
                     <% } %>
 
-    </div>
+                        </div>
 
 
-    <footer>
-        ©Copyright 2018. Made by Ridhaa Cupido
-    </footer>
-
+                        <footer>
+                            ©Copyright 2018. Made by Ridhaa Cupido
+                        </footer>
 
 </body>
 

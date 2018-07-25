@@ -17,6 +17,16 @@ router.get('/', function (req, res, next) {
   });
 });
 
+/* GET archive page. */
+router.get('/archive', function (req, res, next) {
+  console.log(posts);
+
+  res.render('archive', {
+    title: "Home",
+    posts: posts.posts
+  });
+});
+
 
 /* GET create page. */
 router.get('/create', function (req, res, next) {
@@ -151,15 +161,6 @@ request({
 
 
 
-
-// Route for new blog created interlude
-router.get('/newAdded', function (req, res, next) {
-  console.log(posts);
-
-  res.render('newAdded', {
-    title: "newAdded"
-  });
-});
 
 
 
