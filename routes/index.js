@@ -35,12 +35,12 @@ router.post('/create', function (req, res, next) {
 
   // res.send(req.body);
   let obj = {
-    "Title": req.body.Title,
-    "Author": req.body.Author,
+    "title": req.body.title,
+    "author": req.body.Author,
     "dateTime": req.body.dateTime,
     "content": req.body.dateTime,
-
-  }
+    "img": req.body.img
+  };
 
 
   request.post({
@@ -50,17 +50,92 @@ router.post('/create', function (req, res, next) {
     json: true
 
   }, function (error, response, body) {
-   //timeout
-  //  reload(app);
- res.redirect("/");
+
+    res.redirect("/");
 
   });
 
 });
 
 
+// // Route for view page
+router.get('/:id', function(req, res, next) {
+    //make a post request to our database
+    request({
+    uri: "http://localhost:8000/posts/" + req.params.id,
+    method: "GET",
+    }, function(error, response, body) {
+        console.log(JSON.parse(body));
+        //send a response message
+        res.render('view', {posts: JSON.parse(body)});
+    });
+})
 
 
+
+
+// UPDATE ROUTES
+router.get('/update/:id', function(req, res, next) {
+
+  //make a post request to our database
+  request({
+  uri: "http://localhost:8000/posts/" + req.params.id,
+  method: "GET",
+  }, function(error, response, body) {
+      console.log(JSON.parse(body));
+      //send a response message
+      res.render('update', {message: false, posts: JSON.parse(body)});
+  });
+
+});
+
+router.post('/update/:pokeId', function(req, res, next) {
+  request({
+    uri: "http://localhost:8000/posts/" + req.params.id,
+  method: "PATCH",
+  form: {
+      title: req.body.title,
+      content: req.body.content
+  }
+  }, function(error, response, body) {
+      // console.log(body);
+      //send a response message
+      res.render('update', {message: 'Successfully Changed.', posts: JSON.parse(body)});
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Route for new blog created interlude
+router.get('/newAdded', function (req, res, next) {
+  console.log(posts);
+
+  res.render('newAdded', {
+    title: "newAdded"
+  });
+});
 
 
 

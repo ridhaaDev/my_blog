@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View</title>
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/view.css">
+</head>
+
+<body>
+
+<nav>
+<logo><img src="../images/logo.png" height="70"></logo>
+<button id="hamburgerButton">
+    <i class="fas fa-bars"></i>
+</button>
+
+<ul id="navLinks">
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/create">Write</a>
+    </li>
+    <li>
+        <a href="">Remove</a>
+    </li>
+    <li>
+        <a href="">Contact</a>
+    </li>
+</ul>
+</nav>
+
+<div class="viewContainer">
+<h1><%= posts.title %></h1>
+<img src="<%= posts.img %>" width="50%">
+<hr>
+<p><%= posts.content %></p>
+<hr>
+
+<p>By <%= posts.author %></p>
+
+      
+                    
+<button> <a href="/update/<%= posts.id %>" class="btn btn-block btn-primary">Update</a></button>
+<button><a href="/delete/<%= posts.id %>" class="btn btn-block btn-danger">Delete</a></button>
+</div>
+
+
+</body>
+
+
+</html>

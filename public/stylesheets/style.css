@@ -25,31 +25,10 @@ button{
   border-radius: 5px;
   margin: 5px 0;
 }
-nav{
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  height: 30px;
-  /*border: 1px solid black;*/
-  position: sticky;
-  top: 0;
-  background-color: black;
 
+img{
+  width: 100%;
 }
-
-nav button{
-  padding: 0;
-  margin: 0;
-  width: 30px;
-  height: 30px;
-  border: none;
-}
-nav logo{
-  line-height: 30px;
-  text-align: right;
-  margin-right: 10px;
-  color: lawngreen;  
-}
-
 
 
 
@@ -66,12 +45,14 @@ nav logo{
 
 /*Mobile view for guest article*/
 .guestArticle{
-   margin:0 10%;
-   width: 80%;
+   /* margin:0 10%;
+   width: 80%; */
+   background: linear-gradient(to right, #5C258D, #4389A2);
 }
 
 .guestArticle *{
   margin-bottom: 5px;
+
 }
 
 /*Responsive for tablet*/
@@ -80,7 +61,6 @@ nav logo{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap:10px;
-    width: 100px;
 } 
 
 .guestArticle figure img{
@@ -88,6 +68,9 @@ nav logo{
     padding: 0;
     width: 80%;
 
+}
+.articleContainer .article img{
+  height: 300px;
 }
 
 }
@@ -102,12 +85,22 @@ nav logo{
       margin: 0 10%;
       width: 80%;
   } 
+  .articleContainer .article img{
+    width: 100%;
+    height: 250px;
+  }
 
   /*Desktop view for guest article*/
   .guestArticle{
       /* border: 1px solid black; */
-       width: 60%;
-       padding:40px 20%;
+       width: 80%;
+       padding:40px 10%;
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       grid-gap: 20px;
+  }
+  .guestArticle img{
+    width: 100%;
   }
   .guestArticle *{
       text-align: left;

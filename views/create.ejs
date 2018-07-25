@@ -12,32 +12,36 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
     <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/create.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+        <script src="../javascripts/script.js"></script>
 </head>
 
 <body>
   
+<nav>
+        <logo><img src="../images/logo.png" height="70" width="200"></logo>
+        <button id="hamburgerButton">
+            <i class="fas fa-bars"></i>
+        </button>
 
-        <nav>
-            <logo>Tech daily</logo>
-            <button id="hamburgerButton">
-                <i class="fas fa-bars"></i>
-            </button>
-    
-            <ul id="navLinks">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/create">Write</a>
-                </li>
-                <li>
-                    <a href="">Remove</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <ul id="navLinks">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/create">Write</a>
+            </li>
+            <li>
+                <a href="">Remove</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+    </nav>
     
 
 
@@ -46,12 +50,12 @@
         <form method="post" action="/create">
             <div class="input-group">
             <label for="Title">Title</label>
-            <input type="text" class="form-control" placeholder="title" id="Title" name="Title">
+            <input type="text" class="form-control" placeholder="title" id="Title" name="title">
         </div>
 
                 <div class="input-group">
                     <label for="Author">Author</label>
-                    <input type="text" class="form-control" placeholder="username" id="Author" name="Author">
+                    <input type="text" class="form-control" placeholder="username" id="Author" name="author">
 
                 </div>
 
@@ -73,6 +77,8 @@
                     </script>
 
                 </div>
+
+                <input type="file" name="img" accept="image/*">
 
                 <button class="btn btn-primary" >POST</button>
             </form>
