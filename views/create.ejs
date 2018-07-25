@@ -22,28 +22,29 @@
 <body>
   
 <nav>
-        <logo><img src="../images/logo.png" height="70" width="200"></logo>
-        <button id="hamburgerButton">
-            <i class="fas fa-bars"></i>
-        </button>
+<logo  width="200"><img src="../images/logo.png" height="60" width="200"></logo>
+<button id="hamburgerButton">
+    <i class="fas fa-bars"></i>
+</button>
 
-        <ul id="navLinks">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/create">Write</a>
-            </li>
-            <li>
-                <a href="">Remove</a>
-            </li>
-            <li>
-                <a href="">Contact</a>
-            </li>
-        </ul>
-    </nav>
+<ul id="navLinks">
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/create">Write</a>
+    </li>
+    <li>
+        <a href="">Contact</a>
+    </li>
+</ul>
+</nav>
     
-
+<% if (message) { %>
+<div class="alert alert-success" role="alert">
+    <%= message %>
+</div>
+<% } %> 
 
         <div class="formContainer">
 
@@ -80,7 +81,7 @@
 
                 <input type="file" name="img" accept="image/*">
 
-                <button class="btn btn-primary" >POST</button>
+                <button class="btn btn-primary">POST</button>
             </form>
         </div>
 

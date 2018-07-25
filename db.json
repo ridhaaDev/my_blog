@@ -17,7 +17,7 @@
       "img": "https://d1o50x50snmhul.cloudfront.net/wp-content/uploads/2018/07/23163554/gettyimages-477073041.jpg"
     },
     {
-      "Title": "Delivering Health Care By Drone",
+      "title": "Delivering Health Care By Drone",
       "id": 3,
       "author": "Roy Smythe",
       "dateTime": "Sep 22, 2014, 05:24pm",
@@ -25,26 +25,27 @@
       "img": "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Froysmythe%2Ffiles%2F2014%2F09%2Fmedical-drone-jpeg.jpg"
     },
     {
-      "title": "The cognitive cloud? IBM rolls out Watson-as-a-service",
+      "title": "Potential Hurdles Limiting the Internet of Things",
       "author": "asdad",
-      "dateTime": "dasdasd",
-      "content": "dasdasd",
-      "img": "Penguins.jpg",
+      "dateTime": "September 19, 2014",
+      "content": "The hype surrounding the Internet of Things (IoT) is immense. The basic premise behind the IoT is to connect everyday objects to the internet through tiny sensors, allowing them to communicate with businesses, consumers, and each other.The hype surrounding the Internet of Things (IoT) is immense. ",
+      "img": "https://www.smartdatacollective.com/wp-content/uploads/2015/11/IOT-shutterstock_468787469-999x667.jpg",
       "id": 4
     },
     {
-      "title": "Ridhaa",
+      "title": "The Demise of the Data Scientist: Heresy or Fact?",
       "author": "asdad",
-      "dateTime": "dasdasd",
-      "content": "dasdasd",
-      "img": "Penguins.jpg",
+      "dateTime": "September 18, 2014",
+      "content": "As an avid practitioner of data science, I purposely try to read articles that provide new learning and knowledge in this discipline or which at least tend to be controversial from my perspective. One article from an IT leader of a well-respected U.S.",
+      "img": "https://www.smartdatacollective.com/wp-content/uploads/2014/09/marketing-data-scientist.jpg",
       "id": 5
     },
     {
-      "title": "resrsrf",
-      "dateTime": "fdsfsf",
-      "content": "fdsfsf",
-      "img": "",
+      "title": "Using machine learning to detect software vulnerabilities",
+      "author": "Ingrid Fadelli",
+      "dateTime": "July 24, 2018",
+      "content": "A team of researchers from R&D company Draper and Boston University developed a new large-scale vulnerability detection system using machine learning algorithms, which could help to discover software vulnerabilities faster and more efficiently.",
+      "img": "https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2018/creditmarkus.jpg",
       "id": 6
     }
   ]

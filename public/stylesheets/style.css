@@ -45,6 +45,7 @@ img{
 
 /*Mobile view for guest article*/
 .guestArticle{
+  color: black;
    /* margin:0 10%;
    width: 80%; */
    background: linear-gradient(to right, #5C258D, #4389A2);
@@ -93,7 +94,7 @@ img{
   /*Desktop view for guest article*/
   .guestArticle{
       /* border: 1px solid black; */
-       width: 80%;
+       width: 100%;
        padding:40px 10%;
        display: grid;
        grid-template-columns: 2fr 1fr;

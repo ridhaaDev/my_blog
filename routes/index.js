@@ -69,7 +69,7 @@ router.get('/:id', function(req, res, next) {
         //send a response message
         res.render('view', {posts: JSON.parse(body)});
     });
-})
+});
 
 
 
@@ -102,7 +102,31 @@ router.post('/update/:pokeId', function(req, res, next) {
       //send a response message
       res.render('update', {message: 'Successfully Changed.', posts: JSON.parse(body)});
   });
-})
+});
+
+
+
+
+
+// Route for delete 
+/* GET create page. */
+router.get('/delete/:id', function(req, res, next) {
+  console.log(req.params.id)
+//make a post request to our database
+request({
+  uri: "http://localhost:8000/posts/"  + req.params.id,
+  method: "DELETE",
+  }, function(error, response, body) {
+      // console.log(body);
+      //send a response message
+
+      let data = {
+          message: 'Successfully Removed.',
+      }
+
+      res.redirect('..');
+  });
+});
 
 
 

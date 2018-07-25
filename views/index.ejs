@@ -12,8 +12,11 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../javascripts/jquery-3.3.1.min.js"></script>
     <script src="../javascripts/script.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../stylesheets/master.css">
     <link rel="stylesheet" href="../stylesheets/style.css">
+    
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
@@ -24,7 +27,7 @@ and open the template in the editor.
 
 
     <nav>
-        <logo  width="200"><img src="../images/logo.png" height="70" width="200"></logo>
+        <logo  width="200"><img src="../images/logo.png" height="60" width="200"></logo>
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
@@ -41,22 +44,22 @@ and open the template in the editor.
             </li>
         </ul>
     </nav>
-
-    <section class="guestArticle">
+    
+    <section class="guestArticle" width="100%">
     <% if (posts) { %>
     <div>
-        <h1><%= posts[0].title %></h1>
-        <p>By <%= posts[0].author %></p>
+        <h1><%= posts[posts.length-1].title %></h1>
+        <p>By <%= posts[posts.length-1].author %></p>
         <hr>
         <p>
-        <%= posts[0].content %>
+        <%= posts[posts.length-1].content %>
         </p>
 
         <button>Read more</button>
         </div>
 
        
-        <img src="<%= posts[0].img %>">
+        <img src="<%= posts[posts.length-1].img %>">
     
         
        
@@ -84,9 +87,9 @@ and open the template in the editor.
                 <section class="article articel1">
                 <img src="<%= post.img %>">
 
-                <div class="previewContainer"
+                <div class="previewContainer">
 
-                    <h1> <%= post.title %></h1>
+                    <h1><bold> <%= post.title %> </bold></h1>
                     
                         <%= post.content %>
 
