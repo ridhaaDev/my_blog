@@ -109,13 +109,14 @@ router.get('/update/:id', function(req, res, next) {
 
 });
 
-router.post('/update/:pokeId', function(req, res, next) {
+router.post('/update/:id', function(req, res, next) {
   request({
     uri: "http://localhost:8000/posts/" + req.params.id,
   method: "PATCH",
   form: {
       title: req.body.title,
-      content: req.body.content
+      content: req.body.content,
+      author: req.body.author
   }
   }, function(error, response, body) {
       // console.log(body);
