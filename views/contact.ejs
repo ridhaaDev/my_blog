@@ -8,14 +8,15 @@
     <title>Document</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../javascripts/jquery-3.3.1.min.js"></script>
+    <script src="../javascripts/script.js"></script>
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
 
     <link rel="stylesheet" href="../stylesheets/master.css">
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -25,25 +26,27 @@
 <body>
 
     <nav>
-        <logo>
-            <img src="../images/logo.png" height="60">
-        </logo>
+        <img src="images/logo.png" height="70" width="200">
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul id="navLinks">
             <li>
-                <a href="/">Home</a>
+                <a href="/index" style="text-decoration: none">Home</a>
             </li>
             <li>
-                <a href="/create">Write</a>
+                <a href="/create" style="text-decoration: none">Create</a>
             </li>
             <li>
-                <a href="/archive">Archive</a>
+                <a href="/archive" style="text-decoration: none">Archive</a>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact" style="text-decoration: none">Contact</a>
+            </li>
+            <li>
+                <a href="/" style="padding: 0;">
+                    <button class="signInButton">Sign out</button>
+                </a>
             </li>
         </ul>
     </nav>
@@ -57,9 +60,9 @@
                 <!--Form with header-->
 
                 <form action="mail.php" method="post">
-                    <div class="card border-primary rounded-0">
+                    <div class="card border-success rounded-0">
                         <div class="card-header p-0">
-                            <div class="bg-info text-white text-center py-2">
+                            <div class="bg-success text-white text-center py-2">
                                 <h3>
                                     <i class="fa fa-envelope"></i> Contact Me</h3>
                                 <p class="m-0">To find out more about the blog or to give input.</p>
@@ -79,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="input-group mb-2">
+                                <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <i class="fa fa-envelope text-info"></i>
@@ -101,7 +104,7 @@
                             </div>
 
                             <div class="text-center">
-                                <input type="submit" value="Send" class="btn btn-info btn-block rounded-0 py-2">
+                                <input type="submit" value="Send" class="btn btn-success btn-block rounded-0 py-2">
                             </div>
                         </div>
 
@@ -115,7 +118,7 @@
     </div>
 
 
-    <footer>
+    <footer style="position: absolute; bottom: 0">
         ©Copyright 2018. Made by Ridhaa Cupido
     </footer>
 </body>

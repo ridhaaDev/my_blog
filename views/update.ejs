@@ -11,35 +11,46 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
-
+    <script src="../javascripts/script.js"></script>
     <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
     <link rel="stylesheet" href="../stylesheets/view.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <style>
+        * {
+            color: #f4f4f4;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <logo>
-            <img src="../images/logo.png" height="60">
-        </logo>
-        <button id="hamburgerButton">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <ul id="navLinks">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/create">Write</a>
-            </li>
-            <li>
-                <a href="/archive">Archive</a>
-            </li>
-            <li>
-                <a href="/contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
+        <nav>
+                <img src="../images/logo.png" height="70" width="200">
+                <button id="hamburgerButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="navLinks">
+                    <li>
+                        <a href="/index" style="text-decoration: none">Home</a>
+                    </li>
+                    <li>
+                        <a href="/create" style="text-decoration: none">Create</a>
+                    </li>
+                    <li>
+                        <a href="/archive" style="text-decoration: none">Archive</a>
+                    </li>
+                    <li>
+                        <a href="/contact" style="text-decoration: none">Contact</a>
+                    </li>
+                    <li>
+                        <a href="/" style="padding: 0;">
+                            <button class="signInButton">Sign out</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
     <form method="POST">
 
@@ -78,7 +89,7 @@
 
     </form>
 
-    <footer>
+    <footer style="position: absolute; bottom: 0">
         ©Copyright 2018. Made by Ridhaa Cupido
     </footer>
 

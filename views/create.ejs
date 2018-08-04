@@ -13,6 +13,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
     <link rel="stylesheet" href="../stylesheets/master.css">
     <link rel="stylesheet" href="../stylesheets/create.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
@@ -22,77 +24,84 @@
 <body>
 
     <nav>
-        <logo>
-            <img src="../images/logo.png" height="60">
-        </logo>
+        <img src="images/logo.png" height="70" width="200">
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul id="navLinks">
             <li>
-                <a href="/">Home</a>
+                <a href="/index" style="text-decoration: none">Home</a>
             </li>
             <li>
-                <a href="/create">Write</a>
+                <a href="/create" style="text-decoration: none">Create</a>
             </li>
             <li>
-                <a href="/archive">Archive</a>
+                <a href="/archive" style="text-decoration: none">Archive</a>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact" style="text-decoration: none">Contact</a>
+            </li>
+            <li>
+                <a href="/" style="padding: 0;">
+                    <button class="signInButton">Sign out</button>
+                </a>
             </li>
         </ul>
     </nav>
 
 
+    <% if (message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+        <% } %>
 
-    <div class="formContainer">
 
-        <form method="post" action="/create">
-            <div class="input-group">
-                <label for="Title">Title</label>
-                <input type="text" class="form-control" placeholder="title" id="Title" name="title">
+            <div class="formContainer">
+
+                <form method="post" action="/create">
+                    <div class="input-group">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" placeholder="title" id="Title" name="title">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="Author">Author</label>
+                        <input type="text" class="form-control" placeholder="username" id="Author" name="author">
+
+                    </div>
+
+                    <div class="input-group">
+                        <label for="datetime">Date-time</label>
+                        <input type="text" class="form-control" placeholder="datetime" id="Title" name="dateTime">
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="datetime">Content</label>
+                        <textarea id="summernote" name="content"></textarea>
+                        <script>
+                            $(document).ready(function () {
+                                $('#summernote').summernote({
+                                    height: 150
+                                });
+                            });
+                        </script>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label for="imageUrl">Image url</label>
+                        <input type="url" class="form-control" placeholder="Image url..." id="Title" name="img" name="">
+                    </div>
+
+                    <button class="btn btn-primary" style="background-color: #82C341">POST</button>
+                </form>
             </div>
 
-            <div class="input-group">
-                <label for="Author">Author</label>
-                <input type="text" class="form-control" placeholder="username" id="Author" name="author">
-
-            </div>
-
-
-
-            <div class="input-group">
-                <label for="datetime">Date-time</label>
-                <input type="text" class="form-control" placeholder="datetime" id="Title" name="dateTime">
-            </div>
-
-            <div class="input-group">
-                <label for="datetime">Content</label>
-                <textarea id="summernote" name="content"></textarea>
-                <script>
-                    $(document).ready(function () {
-                        $('#summernote').summernote({
-                            height: 150
-                        });
-                    });
-                </script>
-
-            </div>
-
-            <div class="input-group">
-                <label for="imageUrl">Image url</label>
-                <input type="url" class="form-control" placeholder="Image url..." id="Title" name="img" name="">
-            </div>
-
-            <button class="btn btn-primary">POST</button>
-        </form>
-    </div>
-
-    <footer>
-        ©Copyright 2018. Made by Ridhaa Cupido
-    </footer>
+            <footer style="position: absolute; bottom: 0;">
+                ©Copyright 2018. Made by Ridhaa Cupido
+            </footer>
 
 </body>
 

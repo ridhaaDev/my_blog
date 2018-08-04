@@ -1,0 +1,171 @@
+/* 
+    Created on : Jul 15, 2018, 12:24:08 PM
+    Author     : Ridhaa Cupido
+*/
+
+/*Site wide styling*/
+body{
+  background-color: #1B1D1E;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* overflow-x: hidden; */
+}
+
+/* site wide buttons */
+
+button {
+  padding: 3px 16px;
+  font-size: 20px;
+  background-color: black;
+  color: green;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.articleContainer {
+  margin: 50px 10%;
+}
+.overlay{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.articleContainer .article {
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #1B1D1E;
+  color: #f4f4f4;
+}
+
+.articleContainer .article {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Mobile view for guest article*/
+
+.guestArticle {
+  color: white;
+
+}
+
+.guestArticle * {
+  margin-bottom: 5px;
+}
+
+.headerText{
+  position: relative;
+  top: 10%;
+  margin: 0 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+.headerText *{
+  color: white;
+}
+.headerText h1{
+  font-size: 40px;
+}
+
+.headerText button{
+  border: 1px solid white;
+}
+
+
+.guestText{
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/*Responsive for tablet*/
+
+@media screen and (min-width: 650px) {
+  .articleContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 40px 0;
+    /* width: 100%; */
+  }
+  .guestArticle figure img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .articleContainer .article img {
+    height: 300px;
+  }
+}
+
+/*Responsive for desktop*/
+
+@media screen and (min-width: 1000px) {
+  .articleContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px 0;
+  }
+  .articleContainer .article img {
+    width: 100%;
+    height: 250px;
+  }
+  /*Desktop view for guest article*/
+  .guestArticle {
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+  .guestArticle img {
+    width: 100%;
+  }
+  .guestArticle * {
+    text-align: left;
+  }
+  .guestArticle p {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .headerText{
+    position: relative;
+    top: 10%;
+    margin: 0 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+  }
+  .headerText *{
+    color: white;
+  }
+  .headerText h1{
+    font-size: 50px;
+  }
+  .headerText p{
+    font-size: 21px;
+  }
+  
+  .headerText button{
+    border: 1px solid white;
+  }
+  
+}
+
+
+.guestArticle{
+  background: transparent;
+  background: url(../images/image.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 100px 0;
+}

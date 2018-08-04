@@ -15,7 +15,7 @@ and open the template in the editor.
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../stylesheets/master.css">
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -25,52 +25,63 @@ and open the template in the editor.
 
 <body>
 
-
     <nav>
-        <logo>
-            <img src="../images/logo.png" height="60">
-        </logo>
+        <img src="images/logo.png" height="70" width="200">
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul id="navLinks">
             <li>
-                <a href="/">Home</a>
+                <a href="/index" style="text-decoration: none">Home</a>
             </li>
             <li>
-                <a href="/create">Write</a>
+                <a href="/create" style="text-decoration: none">Create</a>
             </li>
             <li>
-                <a href="/archive">Archive</a>
+                <a href="/archive" style="text-decoration: none">Archive</a>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact" style="text-decoration: none">Contact</a>
+            </li>
+            <li>
+                <a href="/" style="padding: 0;">
+                    <button class="signInButton">Sign out</button>
+                </a>
             </li>
         </ul>
     </nav>
 
-    <section class="guestArticle" width="100%">
-        <% if (posts) { %>
-            <div>
-                <h1>
-                    <%= posts[posts.length-1].title %>
-                </h1>
-                <p>By
-                    <%= posts[posts.length-1].author %>
-                </p>
-                <hr>
-                <p>
-                    <%= posts[posts.length-1].content %>
-                </p>
+    <header style="width: 100%; height: 750px; background: url(../images/image.jpeg); background-size: cover; background-attachment: fixed">
 
-                <button id="<%= posts[posts.length-1].id %>">
-                    <a href="/<%= posts[posts.length-1].id %>">Read More</a>
-                </button>
-            </div>
+        <div class="headerText">
+            <h1>Technology is the future.</h1>
+            <p>And you can be a part of it. We are committed to bringing you the latest in tech, gadgets and software examples to enrich your mind, provide you with information, tutorials, and general help. Our main goal is to deliver information that is accurate and inclusive, but also concise and straight to the point. And the best part about it is that signing up is free and you can optionally recieve email notifications about our latest posts and posts that are most relevant to you. Enjoy! </p>
+            <button>Sign up</button>
+            <button>Take a tour</button>
+        </div>
+    </header>
+    <div class="overlay">
+        <section class="guestArticle" width="100%">
+            <% if (posts) { %>
+                <div class="guestText">
+                    <h1>
+                        <%= posts[posts.length-1].title %>
+                    </h1>
+                    <p>By
+                        <%= posts[posts.length-1].author %>
+                    </p>
+                    <hr>
+                    <p>
+                        <%= posts[posts.length-1].content %>
+                    </p>
+
+                    <button id="<%= posts[posts.length-1].id %>">
+                        <a href="/<%= posts[posts.length-1].id %>">Read More</a>
+                    </button>
+                </div>
 
 
-            <img src="<%= posts[posts.length-1].img %>">
+                <img src="<%= posts[posts.length-1].img %>">
 
 
 
@@ -79,10 +90,10 @@ and open the template in the editor.
 
 
 
-            <% } %>
+                <% } %>
 
-    </section>
-
+        </section>
+    </div>
 
     <!-- <h1>
             <%=  title %>
@@ -102,17 +113,17 @@ and open the template in the editor.
 
                         <h1>
                             <bold>
-                                <%= post.title %>
+                                <%= post.title%>
                             </bold>
                         </h1>
 
-                        <%= post.content %>
+                        <%- post.content.substring(0, 150); %>...
 
                             <p class=""> Author:
                                 <%= post.author %>
                             </p>
-                            <button id="<%= post.id %>">
-                                <a href="/<%= post.id %>">Read More</a>
+                            <button id="<%= post.id %>" class="btn"  style="background-color: #82C341;">
+                                <a href="/<%= post.id %>" style="color:#F4F4F4">Read More</a>
                             </button>
                 </section>
                 </section>

@@ -1,0 +1,53 @@
+/* 
+    Created on : Jul 29, 2018, 5:28:08 PM
+    Author     : FUJITSU
+*/
+.container{
+    width: 500px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+input[type="email"], textarea, p{
+    grid-column: 1/3;
+}
+input[type="checkbox"]{
+    height: 20px;
+    display: inline;
+    margin: 5px;
+    line-height: 20px;
+}
+p{
+    line-height: 5px;
+    padding: 0;
+}
+
+button{
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width: 500px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+
+form{
+       display: block;
+    }
+    
+    form *{
+        margin-bottom: 3px;
+    }
+}
+
+.container{
+    background-color: #ccc;
+    padding: 50px 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+}

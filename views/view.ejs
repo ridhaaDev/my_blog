@@ -6,32 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>View</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../stylesheets/master.css">
     <link rel="stylesheet" href="../stylesheets/view.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <style>
+        * {
+            color: #f4f4f4;
+        }
+    </style>
 </head>
 
 <body>
 
     <nav>
-        <logo>
-            <img src="../images/logo.png" height="60">
-        </logo>
+        <img src="images/logo.png" height="60">
         <button id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
-
         <ul id="navLinks">
             <li>
-                <a href="/">Home</a>
+                <a href="/index" style="text-decoration: none">Home</a>
             </li>
             <li>
-                <a href="/create">Write</a>
+                <a href="/create" style="text-decoration: none">Create</a>
             </li>
             <li>
-                <a href="/archive">Archive</a>
+                <a href="/archive" style="text-decoration: none">Archive</a>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact" style="text-decoration: none">Contact</a>
+            </li>
+            <li>
+                <a href="/login" style="padding: 0;">
+                    <button class="signInButton" style="padding: 4px;margin: 0">Sign in</button>
+                </a>
             </li>
         </ul>
     </nav>
@@ -43,7 +56,7 @@
         <img src="<%= posts.img %>" width="50%">
         <hr>
         <p>
-            <%= posts.content %>
+            <%- posts.content %>
         </p>
         <hr>
 
@@ -52,17 +65,24 @@
         </p>
 
 
+        <style>
+            button {
+                padding: 0;
+            }
+        </style>
 
         <button>
-            <a href="/update/<%= posts.id %>" class="btn btn-block btn-primary">Update</a>
+            <a href="/update/<%= posts.id %>" class="btn btn-block btn-primary" style="background-color: #82C341">Update</a>
         </button>
         <button>
-            <a href="/delete/<%= posts.id %>" class="btn btn-block btn-danger">Delete</a>
+            <a href="/delete/<%= posts.id %>" class="btn btn-block btn-danger" onclick="deleteBlog()">Delete</a>
         </button>
     </div>
     <br>
     <br>
     <br>
+
+
 
     <footer>
         ©Copyright 2018. Made by Ridhaa Cupido

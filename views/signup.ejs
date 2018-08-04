@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/hamburger.js"></script>
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/signup.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../images/logo.png" alt="" srcset="" style="display: inline; height: 60px;">
+        <br>
+        <br>
+        <br>
+        <h1>Sign up</h1>
+        <form action="/signup" method="post">
+            <input type="name" class="form-control" placeholder="First name" name="firstName">
+            <input type="name" class="form-control" placeholder="Last name" name="lastName">
+            <input type="email" class="form-control" placeholder="Email" name="email">
+            <textarea class="form-control" placeholder="Bio" name="about">
+            </textarea>
+
+            <input type="name" class="form-control" placeholder="Username" name="username">
+            <input type="password" class="form-control" placeholder="Password" name="password">
+            <p><input type="checkbox" placeholder="">Sign up for our newsletter?</p>
+            <button type="submit" class="btn">Sign up</button>
+            <br>
+            <a href="/login" style="grid-column: 1/3">Already have an account? login here...</a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
